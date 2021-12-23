@@ -25,3 +25,7 @@ path = "src/basic/ref_test.rs"
 [[bin]]
 name = "struct_test"
 path = "src/basic/struct_test.rs"
+
+[[bin]]
+name = "match_test"
+path = "src/basic/match_test.rs"
