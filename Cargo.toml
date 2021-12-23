@@ -1,0 +1,27 @@
+[package]
+name = "rust-workspace"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+env_logger = "0.7"
+
+[[bin]]
+name = "main"
+path = "main.rs"
+
+[[bin]]
+name = "test"
+path = "src/basic/test.rs"
+
+[[bin]]
+name = "string_test"
+path = "src/basic/string_test.rs"
+
+[[bin]]
+name = "ref_test"
+path = "src/basic/ref_test.rs"
+
+[[bin]]
+name = "struct_test"
+path = "src/basic/struct_test.rs"
