@@ -1,9 +1,12 @@
 
 
 fn main() {
-    let s = String::from("AABBC");
+    let hello = "Здравствуйте";
+    let answer = &hello[0..4];
 
-    s.push_str("ABBC");
+    for c in hello.chars() {
+        println!("{}", c);
+    }
 
-    println!("The value of x is: {}", s);
+    println!("The value of x is: {}", answer);
 }
