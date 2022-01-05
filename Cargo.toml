@@ -15,21 +15,25 @@ name = "test"
 path = "src/basic/test.rs"
 
 [[bin]]
-name = "string_test"
+name = "string"
 path = "src/basic/string_test.rs"
 
 [[bin]]
-name = "ref_test"
+name = "ref"
 path = "src/basic/ref_test.rs"
 
 [[bin]]
-name = "struct_test"
+name = "struct"
 path = "src/basic/struct_test.rs"
 
 [[bin]]
-name = "match_test"
+name = "match"
 path = "src/basic/match_test.rs"
 
 [[bin]]
-name = "vector_test"
+name = "vector"
 path = "src/basic/vector_test.rs"
+
+[[bin]]
+name = "hashmap"
+path = "src/basic/hashmap_test.rs"
