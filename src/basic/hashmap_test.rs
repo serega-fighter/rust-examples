@@ -9,4 +9,8 @@ fn main() {
     scores.insert(String::from("Yellow"), 50);
 
     println!("{:?}", scores);
+
+    for (key, value) in &scores {
+        println!("{} -> {}", key, value);
+    }
 }
