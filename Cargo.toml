@@ -41,3 +41,7 @@ path = "src/basic/hashmap_test.rs"
 [[bin]]
 name = "generics"
 path = "src/basic/generics_test.rs"
+
+[[bin]]
+name = "lifetime"
+path = "src/basic/lifetime_test.rs"
