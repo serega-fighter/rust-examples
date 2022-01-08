@@ -5,7 +5,9 @@ struct Point<T, U> {
 }
 
 pub trait Printable {
-    fn print(&self) -> String;
+    fn print(&self) -> String {
+        String::from("Default value")
+    }
 }
 
 impl<T, U> Point<T, U> {
@@ -19,7 +21,7 @@ impl<T, U> Point<T, U> {
 
 impl<T, U> Printable for Point<T, U> {
     fn print(&self) -> String {
-        "ABC".to_string()
+        String::from("ABC")
     }
 }
 
