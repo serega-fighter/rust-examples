@@ -37,3 +37,7 @@ path = "src/basic/vector_test.rs"
 [[bin]]
 name = "hashmap"
 path = "src/basic/hashmap_test.rs"
+
+[[bin]]
+name = "generics"
+path = "src/basic/generics_test.rs"
