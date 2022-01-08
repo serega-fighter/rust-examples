@@ -25,6 +25,18 @@ impl<T, U> Printable for Point<T, U> {
     }
 }
 
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+    let mut largest = list[0];
+
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
 fn main() {
 
     let p1 = Point { x: 5, y: 10.4 };
@@ -34,4 +46,7 @@ fn main() {
 
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
     println!("printed = {}", p3.print());
+
+    let ve = vec![1, 4, 2, 0];
+    println!("Largest of vec {:?} is {}", ve, largest(&ve))
 }
