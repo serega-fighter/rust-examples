@@ -45,3 +45,7 @@ path = "src/basic/generics_test.rs"
 [[bin]]
 name = "lifetime"
 path = "src/basic/lifetime_test.rs"
+
+[[bin]]
+name = "box"
+path = "src/basic/box_test.rs"
