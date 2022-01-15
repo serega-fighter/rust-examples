@@ -2,7 +2,7 @@
 
 fn main() {
     let hello = "Здравствуйте";
-    let answer = &hello[0..4];
+    let answer: &str = &hello[0..4];
 
     for c in hello.chars() {
         println!("{}", c);
