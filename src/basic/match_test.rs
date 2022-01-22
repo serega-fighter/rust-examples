@@ -6,6 +6,18 @@ enum Coin {
     Quarter,
 }
 
+fn retInt() -> i32 {
+    5
+}
+
+fn retOptional() -> Option<String> {
+    if retInt() > 4 {
+        return Some(String::from("ABC"))
+    } else {
+        return None
+    }
+}
+
 fn value_in_cents(coin: Coin) -> u8 {
     match coin {
         Coin::Penny => 1,
@@ -16,5 +28,14 @@ fn value_in_cents(coin: Coin) -> u8 {
 }
 
 fn main() {
+    match retOptional() {
+        Some(x) => {
+            println!("Got some {}", x)
+        }
+        None => {
+            println!("Got none")
+        }
+    }
+
     println!("Value: {}", value_in_cents(Coin::Nickel))
 }
