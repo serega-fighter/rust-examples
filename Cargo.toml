@@ -36,7 +36,11 @@ path = "src/basic/vector_test.rs"
 
 [[bin]]
 name = "hashmap"
-path = "src/basic/hashmap_test.rs"
+path = "src/basic/collections/hashmap_test.rs"
+
+[[bin]]
+name = "btreemap"
+path = "src/basic/collections/btreemap_test.rs"
 
 [[bin]]
 name = "generics"
