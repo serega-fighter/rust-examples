@@ -40,4 +40,9 @@ fn main() {
     }
 
     movies.remove("The Blues Brothers");
+
+    match movies.get("The Godfather") {
+        Some(review) => println!("{}: {}", "The Godfather", review),
+        None => println!("{} is unreviewed.", "The Godfather")
+    }
 }
