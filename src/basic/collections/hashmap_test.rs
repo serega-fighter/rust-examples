@@ -17,6 +17,18 @@ such as HashDoS.
 The hash table implementation is a Rust port of Google’s SwissTable.
 */
 
+#[derive(Hash, Eq, PartialEq, Debug)]
+struct Viking {
+    name: String,
+    country: String,
+}
+
+impl Viking {
+    fn new(name: &str, country: &str) -> Viking {
+        Viking { name: name.to_string(), country: country.to_string() }
+    }
+}
+
 fn main() {
 
     let mut scores = HashMap::new();
@@ -28,5 +40,13 @@ fn main() {
 
     for (key, value) in &scores {
         println!("{} -> {}", key, value);
+    }
+
+    let mut vikings = HashMap::new();
+    vikings.insert(Viking::new("Einar", "Norway"), 5);
+    vikings.insert(Viking::new("Olaf", "Denmark"), 10);
+
+    for (viking, health) in &vikings {
+        println!("{:?} has {} hp", viking, health);
     }
 }
