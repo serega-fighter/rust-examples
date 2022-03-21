@@ -55,5 +55,13 @@ name = "box"
 path = "src/basic/box_test.rs"
 
 [[bin]]
+name = "opt"
+path = "src/basic/option_test.rs"
+
+[[bin]]
 name = "lifetime_struct"
 path = "src/basic/structs/lifetime_struct_test.rs"
+
+[[bin]]
+name = "lifetime_vec"
+path = "src/basic/structs/lifetime_vec_test.rs"
