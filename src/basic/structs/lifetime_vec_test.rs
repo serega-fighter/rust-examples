@@ -1,23 +1,29 @@
 
+#[derive(Debug)]
 struct Holder {
-    ctr: u64
+    ctr: String
 }
 
 impl Holder {
-    pub fn get(self) -> u64 {
-        return self.ctr
+    pub fn get(self) -> &str {
+        return self.ctr.as
     }
 
-    pub fn mutate(&mut self, val: u64) {
+    pub fn mutate(&mut self, val: String) {
         self.ctr = val
     }
 }
 
 fn main() {
-    let mut v = vec![Holder{ctr: 5}, Holder{ctr: 6}, Holder{ctr: 3}, Holder{ctr: 7}, Holder{ctr: 8}];
+    let mut v = vec![
+        Holder{ctr: "Abc".to_string()},
+        Holder{ctr: "cdef"},
+        Holder{ctr: "zvvx"},
+        Holder{ctr: "zvw2"},
+        Holder{ctr: "vbs2"}
+    ];
     let x: Option<&Holder> = v.get(0);
-    println!("X: {}", x.get());
+    println!("X: {:?}", x.unwrap());
     let y = v.get(1);
-    println!("Y: {}", y.get());
-
+    println!("Y: {:?}", y.unwrap());
 }
