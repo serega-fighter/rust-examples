@@ -14,7 +14,7 @@ fn main() {
     let borrowed: &str = x.as_str();
     println!("Just borrowed string: {}", borrowed);
 
-    let createdAgain = String::from(borrowed);
+    let createdAgain: String = String::from(borrowed);
     println!("Just create from borrow: {}", createdAgain);
 
     // Split
