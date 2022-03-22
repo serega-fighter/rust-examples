@@ -1,14 +1,15 @@
 
 #[derive(Debug)]
-struct User {
+struct User<'a> {
     active: bool,
     username: String,
     email: String,
+    strRef: &'a str,
     sign_in_count: u64,
 }
 
-impl User {
-    fn is_celeb(&self) -> bool {
+impl<'a> User<'a> {
+    fn is_celeb(& self) -> bool {
         self.username.len() > 5
     }
 }
@@ -19,6 +20,7 @@ fn main() {
         email: String::from("someone@example.com"),
         username: String::from("someusername123"),
         active: true,
+        strRef: "ABC",
         sign_in_count: 1,
     };
 
