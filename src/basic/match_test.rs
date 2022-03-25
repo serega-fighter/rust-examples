@@ -38,4 +38,20 @@ fn main() {
     }
 
     println!("Value: {}", value_in_cents(Coin::Nickel))
+
+
+    /*
+    The compiler can optimize this kind of match using a jump table, just like
+    a switch statement in C++. A similar optimization is applied when each arm of a
+    match produces a constant value. In that case, the compiler builds an array of
+    those values, and the match is compiled into an array access. Apart from a bounds
+    check, there is no branching at all in the compiled code.
+    */
+    match code {
+        0 => println!("OK"),
+        1 => println!("Wires Tangled"),
+        2 => println!("User Asleep"),
+        3 => println!("User log"),
+        _ => println!("Unrecognized Error {}", code)
+    }
 }
