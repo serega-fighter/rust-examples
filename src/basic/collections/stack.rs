@@ -18,6 +18,10 @@ impl<T> Stack<T> {
     fn pop(&mut self) -> Option<T> {
         self.stack.pop()
     }
+
+    fn peek(&self) -> Option<&T> {
+        self.stack.last()
+    }
 }
 
 fn main() {
@@ -28,4 +32,7 @@ fn main() {
     st.push(String::from("CDA"));
 
     println!("Stack has {} elements", st.size());
+
+    let item = st.pop();
+    assert_eq!(item.unwrap(), "CDA");
 }
