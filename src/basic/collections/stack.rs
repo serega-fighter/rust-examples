@@ -21,7 +21,7 @@ impl<T> Stack<T> {
 }
 
 fn main() {
-    let st = Stack {stack: Vec::new() };
+    let mut st = Stack {stack: Vec::new() };
 
     st.push(String::from("ABC"));
     st.push(String::from("DEF"));
