@@ -29,6 +29,10 @@ impl Viking {
     }
 }
 
+fn insert_new_guy() -> i64 {
+    0
+}
+
 fn main() {
 
     let mut vikings = HashMap::new();
@@ -54,4 +58,10 @@ fn main() {
     vikings.remove(&k);
     println!("Contains key: {}", vikings.contains_key(&k));
 
+    // insert if absent
+    let entry = vikings.entry(k).or_insert(15);
+    println!("Entry: {:?}", entry);
+
+    let entry2 = vikings.entry(Viking::new("A", "B")).or_insert_with(insert_new_guy);
+    println!("Entry2: {:?}", entry2);
 }
