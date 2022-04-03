@@ -31,17 +31,6 @@ impl Viking {
 
 fn main() {
 
-    let mut scores = HashMap::new();
-
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
-
-    println!("{:?}", scores);
-
-    for (key, value) in &scores {
-        println!("{} -> {}", key, value);
-    }
-
     let mut vikings = HashMap::new();
     vikings.insert(Viking::new("Einar", "Norway"), 5);
     vikings.insert(Viking::new("Olaf", "Denmark"), 10);
@@ -49,4 +38,11 @@ fn main() {
     for (viking, health) in &vikings {
         println!("{:?} has {} hp", viking, health);
     }
+
+    let k = Viking::new("Einar", "Norway");
+    println!("Contains key: {}", vikings.contains_key(&k));
+
+    vikings.remove(&k);
+    println!("Contains key: {}", vikings.contains_key(&k));
+
 }
