@@ -42,6 +42,15 @@ fn main() {
     let k = Viking::new("Einar", "Norway");
     println!("Contains key: {}", vikings.contains_key(&k));
 
+    let queried = vikings.get(&k);
+    match queried {
+        Some(x) => println!("Value found {}", x),
+        None => println!("Value not found")
+    }
+
+    // Will panic if the key is not found
+    println!("Query key: {}", vikings[&k]);
+
     vikings.remove(&k);
     println!("Contains key: {}", vikings.contains_key(&k));
 
