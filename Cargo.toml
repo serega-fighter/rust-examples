@@ -40,7 +40,7 @@ path = "src/basic/match_test.rs"
 
 [[bin]]
 name = "vector"
-path = "src/basic/vector_test.rs"
+path = "src/basic/collections/vector_test.rs"
 
 [[bin]]
 name = "hashmap"
