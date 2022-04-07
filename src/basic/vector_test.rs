@@ -1,14 +1,25 @@
 
-
 fn main() {
+    let mut v: Vec<String> = Vec::new();
 
-    let mut v: Vec<i32> = Vec::new();
+    v.push(String::from("A"));
+    v.push(String::from("B"));
+    v.push(String::from("C"));
+    v.push(String::from("D"));
 
-    v.push(5);
-    v.push(8);
-    v.push(10);
+    for (pos, e) in v.iter().enumerate() {
+        println!("Element at position {}: {:?}", pos, e);
+    }
 
-    println!("Vec: {:?}", v);
+    for i in &v {
+        println!("{}", i);
+    }
 
-    let z = vec![1, 3, 5];
+    for i in &mut v {
+        *i = String::from("Z");
+    }
+
+    for i in &v {
+        println!("{}", i);
+    }
 }
