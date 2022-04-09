@@ -28,11 +28,19 @@ impl<T> Queue<T> {
 }
 
 fn main() {
-    let q = Queue { queue: Vec::new() };
 
-    let mut queue: Queue<isize> = Queue::new();
-    queue.enqueue(1);
+    let mut queue: Queue<String> = Queue::new();
+    queue.enqueue(String::from("ABC"));
+    queue.enqueue(String::from("DEF"));
+    queue.enqueue(String::from("CGA"));
+
     let item = queue.dequeue();
-    assert_eq!(item, 1);
-    assert_eq!(queue.is_empty(), true);
+    assert_eq!(item, String::from("ABC"));
+
+    let item2: Option<&String> = queue.peek();
+    let str_ref: &String = item2.unwrap();
+    let val_casted: &str = str_ref;
+    println!("Item 2: {}", val_casted);
+
+    assert_eq!(queue.is_empty(), false);
 }

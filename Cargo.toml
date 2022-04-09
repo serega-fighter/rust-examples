@@ -19,6 +19,10 @@ name = "stack"
 path = "src/basic/collections/stack.rs"
 
 [[bin]]
+name = "queue"
+path = "src/basic/collections/queue.rs"
+
+[[bin]]
 name = "string"
 path = "src/basic/string_test.rs"
 
