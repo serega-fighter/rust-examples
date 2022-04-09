@@ -28,7 +28,7 @@ path = "src/basic/string_test.rs"
 
 [[bin]]
 name = "ref"
-path = "src/basic/ref_test.rs"
+path = "src/basic/refs/ref_test.rs"
 
 [[bin]]
 name = "struct"
