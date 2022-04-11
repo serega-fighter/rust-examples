@@ -22,8 +22,13 @@ pub fn showVec(v: &Vec<String>) {
     }
 }
 
+fn factorial(n: usize) -> usize {
+    (1..n+1).fold(1, |a, b| a * b)
+}
+
 fn main() {
 
+    // Simple case
     let mut table = Table::new();
     table.insert("Gesualdo".to_string(), vec!["many madrigals".to_string(), "Tenebrae Responsoria".to_string()]);
     table.insert("Caravaggio".to_string(), vec!["The Musicians".to_string(), "The Calling of St. Matthew".to_string()]);
@@ -31,6 +36,7 @@ fn main() {
 
     showTable(&mut table);
 
+    // Borrow and reassign to modify vector
     let mut vec = Vec::new();
     vec.push("ABC".to_string());
     vec.push("BCA".to_string());
@@ -41,4 +47,8 @@ fn main() {
     *s = "ZXV".to_string();
 
     showVec(&vec);
+
+    // Reference to expression
+    let r = &factorial(6);
+    assert_eq!(r + &1009, 1729);
 }
