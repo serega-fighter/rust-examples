@@ -27,7 +27,7 @@ name = "string"
 path = "src/basic/string_test.rs"
 
 [[bin]]
-name = "ref"
+name = "ref_test"
 path = "src/basic/refs/ref_test.rs"
 
 [[bin]]
