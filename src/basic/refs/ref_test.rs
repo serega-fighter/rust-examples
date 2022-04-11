@@ -2,10 +2,6 @@ use std::collections::HashMap;
 
 type Table = HashMap<String, Vec<String>>;
 
-pub fn change_str(s: &mut String) {
-    s.push_str("AAC");
-}
-
 pub fn showTable(table: &mut Table) {
     for (artist, works) in table {
 
@@ -21,10 +17,6 @@ pub fn showTable(table: &mut Table) {
 }
 
 fn main() {
-    let mut s = String::from("AABBC");
-
-    change_str(&mut s);
-    println!("The value of x is: {}", s);
 
     let mut table = Table::new();
     table.insert("Gesualdo".to_string(), vec!["many madrigals".to_string(), "Tenebrae Responsoria".to_string()]);
