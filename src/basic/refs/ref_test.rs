@@ -16,6 +16,12 @@ pub fn showTable(table: &mut Table) {
     }
 }
 
+pub fn showVec(v: &Vec<String>) {
+    for w in v {
+        println!("val: {}", w);
+    }
+}
+
 fn main() {
 
     let mut table = Table::new();
@@ -24,4 +30,15 @@ fn main() {
     table.insert("Cellini".to_string(), vec!["Perseus with the head of Medusa".to_string(), "a salt cellar".to_string()]);
 
     showTable(&mut table);
+
+    let mut vec = Vec::new();
+    vec.push("ABC".to_string());
+    vec.push("BCA".to_string());
+    vec.push("CDE".to_string());
+    vec.push("DEF".to_string());
+
+    let s = &mut vec[2];
+    *s = "ZXV".to_string();
+
+    showVec(&vec);
 }
