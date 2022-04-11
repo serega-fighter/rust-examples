@@ -29,18 +29,11 @@ impl Viking {
     }
 }
 
+fn insert_new_guy() -> i64 {
+    0
+}
+
 fn main() {
-
-    let mut scores = HashMap::new();
-
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
-
-    println!("{:?}", scores);
-
-    for (key, value) in &scores {
-        println!("{} -> {}", key, value);
-    }
 
     let mut vikings = HashMap::new();
     vikings.insert(Viking::new("Einar", "Norway"), 5);
@@ -49,4 +42,26 @@ fn main() {
     for (viking, health) in &vikings {
         println!("{:?} has {} hp", viking, health);
     }
+
+    let k = Viking::new("Einar", "Norway");
+    println!("Contains key: {}", vikings.contains_key(&k));
+
+    let queried = vikings.get(&k);
+    match queried {
+        Some(x) => println!("Value found {}", x),
+        None => println!("Value not found")
+    }
+
+    // Will panic if the key is not found
+    println!("Query key: {}", vikings[&k]);
+
+    vikings.remove(&k);
+    println!("Contains key: {}", vikings.contains_key(&k));
+
+    // insert if absent
+    let entry = vikings.entry(k).or_insert(15);
+    println!("Entry: {:?}", entry);
+
+    let entry2 = vikings.entry(Viking::new("A", "B")).or_insert_with(insert_new_guy);
+    println!("Entry2: {:?}", entry2);
 }
