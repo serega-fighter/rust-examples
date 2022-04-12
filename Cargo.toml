@@ -31,6 +31,14 @@ name = "ref_test"
 path = "src/basic/refs/ref_test.rs"
 
 [[bin]]
+name = "trait"
+path = "src/basic/generics/trait_test.rs"
+
+[[bin]]
+name = "generic_simple"
+path = "src/basic/generics/generic_simple.rs"
+
+[[bin]]
 name = "struct"
 path = "src/basic/structs/struct_test.rs"
 
