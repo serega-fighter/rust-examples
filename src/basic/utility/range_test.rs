@@ -11,4 +11,6 @@ pub fn main() {
 
     let b: RangeFrom<i32> = 1..;
     println!("{:?}", b);
+
+    dbg!(&b);
 }
