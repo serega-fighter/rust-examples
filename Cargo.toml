@@ -35,6 +35,10 @@ name = "range_test"
 path = "src/basic/utility/range_test.rs"
 
 [[bin]]
+name = "type_id"
+path = "src/basic/utility/type_id_test.rs"
+
+[[bin]]
 name = "trait"
 path = "src/basic/generics/trait_test.rs"
 
