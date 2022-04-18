@@ -89,3 +89,7 @@ path = "src/basic/structs/lifetime_struct_test.rs"
 [[bin]]
 name = "lifetime_vec"
 path = "src/basic/structs/lifetime_vec_test.rs"
+
+[[bin]]
+name = "any_dbg_logger"
+path = "src/examples/utility/any_dbg_logger.rs"
