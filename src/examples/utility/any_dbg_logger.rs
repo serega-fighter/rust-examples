@@ -1,7 +1,8 @@
 use std::fmt::Debug;
 use std::any::Any;
 
-// Logger function for any type that implements Debug.
+// Logger function for any type that implements Debug
+
 fn log<T: Any + Debug>(value: &T) {
     let value_any = value as &dyn Any;
 

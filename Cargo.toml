@@ -68,7 +68,7 @@ path = "src/basic/collections/btreemap_test.rs"
 
 [[bin]]
 name = "generics"
-path = "src/basic/generics_test.rs"
+path = "src/basic/generics/generics_test.rs"
 
 [[bin]]
 name = "lifetime"
