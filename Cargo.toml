@@ -93,3 +93,11 @@ path = "src/basic/structs/lifetime_vec_test.rs"
 [[bin]]
 name = "any_dbg_logger"
 path = "src/examples/utility/any_dbg_logger.rs"
+
+[[bin]]
+name = "thread_scope"
+path = "src/basic/concurrency/thread_scope.rs"
+
+[[bin]]
+name = "mutex_example"
+path = "src/basic/concurrency/mutex_example.rs"
