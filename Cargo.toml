@@ -101,3 +101,7 @@ path = "src/basic/concurrency/thread_scope.rs"
 [[bin]]
 name = "mutex_example"
 path = "src/basic/concurrency/mutex_example.rs"
+
+[[bin]]
+name = "atomic_flags_test"
+path = "src/basic/concurrency/atomics/atomic_flags_test.rs"
