@@ -105,3 +105,7 @@ path = "src/basic/concurrency/mutex_example.rs"
 [[bin]]
 name = "atomic_flags_test"
 path = "src/basic/concurrency/atomics/atomic_flags_test.rs"
+
+[[bin]]
+name = "lazy_initialization_pattern"
+path = "src/basic/concurrency/atomics/lazy_initialization_pattern.rs"
