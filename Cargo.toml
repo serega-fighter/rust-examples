@@ -109,3 +109,7 @@ path = "src/basic/concurrency/atomics/atomic_flags_test.rs"
 [[bin]]
 name = "lazy_initialization_pattern"
 path = "src/basic/concurrency/atomics/lazy_initialization_pattern.rs"
+
+[[bin]]
+name = "atomic_increment_id_gen"
+path = "src/basic/concurrency/atomics/atomic_increment_id_gen.rs"
