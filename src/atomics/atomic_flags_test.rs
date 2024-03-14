@@ -1,8 +1,3 @@
-use std::sync::atomic::AtomicBool;
-use std::sync::atomic::Ordering::Relaxed;
-use std::thread;
-use std::time::Duration;
-
 fn do_some_work() {
 
 }

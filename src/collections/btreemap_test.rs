@@ -27,22 +27,30 @@ element is expected to take B * log(n) comparisons, which is generally worse tha
 In practice, however, performance is excellent.
 */
 
-fn main() {
-    let mut movies = BTreeMap::new();
+#[cfg(test)]
+mod tests {
+    use std::collections::BTreeMap;
 
-    movies.insert("Office Space", 10);
-    movies.insert("Pulp Fiction", 5);
-    movies.insert("The Godfather", 3);
-    movies.insert("The Blues Brothers", 1);
+    #[test]
+    fn test_1() {
+        let mut movies = BTreeMap::new();
 
-    if !movies.contains_key("Les Misérables") {
-        println!("We've got {} reviews, but Les Misérables ain't one.", movies.len());
-    }
+        movies.insert("Office Space", 10);
+        movies.insert("Pulp Fiction", 5);
+        movies.insert("The Godfather", 3);
+        movies.insert("The Blues Brothers", 1);
 
-    movies.remove("The Blues Brothers");
+        if !movies.contains_key("Les Misérables") {
+            println!("We've got {} reviews, but Les Misérables ain't one.", movies.len());
+        }
 
-    match movies.get("The Godfather") {
-        Some(review) => println!("{}: {}", "The Godfather", review),
-        None => println!("{} is unreviewed.", "The Godfather")
+        movies.remove("The Blues Brothers");
+
+        match movies.get("The Godfather") {
+            Some(review) => println!("{}: {}", "The Godfather", review),
+            None => println!("{} is unreviewed.", "The Godfather")
+        }
+
+        assert_eq!(3, *movies.get("The Godfather").unwrap());
     }
 }
