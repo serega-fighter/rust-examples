@@ -20,11 +20,11 @@ path = "src/basic/test.rs"
 
 [[bin]]
 name = "stack"
-path = "src/basic/collections/stack.rs"
+path = "src/collections/stack.rs"
 
 [[bin]]
 name = "queue"
-path = "src/basic/collections/queue.rs"
+path = "src/collections/queue.rs"
 
 [[bin]]
 name = "string"
@@ -60,15 +60,15 @@ path = "src/basic/match_test.rs"
 
 [[bin]]
 name = "vector"
-path = "src/basic/collections/vector_test.rs"
+path = "src/collections/vector_test.rs"
 
 [[bin]]
 name = "hashmap"
-path = "src/basic/collections/hashmap_test.rs"
+path = "src/collections/hashmap_test.rs"
 
 [[bin]]
 name = "btreemap"
-path = "src/basic/collections/btreemap_test.rs"
+path = "src/collections/btreemap_test.rs"
 
 [[bin]]
 name = "generics"
