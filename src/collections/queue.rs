@@ -25,6 +25,14 @@ impl<T> Queue<T> {
     fn peek(&self) -> Option<&T> {
         self.queue.first()
     }
+
+    fn convert(mut self) -> Vec<T> {
+        let mut out: Vec<T> = Vec::new();
+        while !self.is_empty() {
+            out.push(self.dequeue());
+        }
+        out
+    }
 }
 
 #[cfg(test)]
@@ -47,5 +55,17 @@ mod tests {
         println!("Item 2: {}", val_casted);
 
         assert_eq!(queue.is_empty(), false);
+    }
+
+    #[test]
+    fn test_convert_ownership() {
+        let mut queue: Queue<String> = Queue::new();
+        queue.enqueue(String::from("ABC"));
+        queue.enqueue(String::from("DEF"));
+        queue.enqueue(String::from("CGA"));
+
+        let vec = queue.convert();
+
+        assert_eq!(3, vec.len());
     }
 }
