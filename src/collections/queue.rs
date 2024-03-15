@@ -27,20 +27,25 @@ impl<T> Queue<T> {
     }
 }
 
-fn main() {
+#[cfg(test)]
+mod tests {
+    use crate::collections::queue::Queue;
 
-    let mut queue: Queue<String> = Queue::new();
-    queue.enqueue(String::from("ABC"));
-    queue.enqueue(String::from("DEF"));
-    queue.enqueue(String::from("CGA"));
+    #[test]
+    fn test_get() {
+        let mut queue: Queue<String> = Queue::new();
+        queue.enqueue(String::from("ABC"));
+        queue.enqueue(String::from("DEF"));
+        queue.enqueue(String::from("CGA"));
 
-    let item = queue.dequeue();
-    assert_eq!(item, String::from("ABC"));
+        let item = queue.dequeue();
+        assert_eq!(item, String::from("ABC"));
 
-    let item2: Option<&String> = queue.peek();
-    let str_ref: &String = item2.unwrap();
-    let val_casted: &str = str_ref;
-    println!("Item 2: {}", val_casted);
+        let item2: Option<&String> = queue.peek();
+        let str_ref: &String = item2.unwrap();
+        let val_casted: &str = str_ref;
+        println!("Item 2: {}", val_casted);
 
-    assert_eq!(queue.is_empty(), false);
+        assert_eq!(queue.is_empty(), false);
+    }
 }

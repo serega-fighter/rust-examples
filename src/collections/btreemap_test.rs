@@ -32,7 +32,7 @@ mod tests {
     use std::collections::BTreeMap;
 
     #[test]
-    fn test_1() {
+    fn test_get() {
         let mut movies = BTreeMap::new();
 
         movies.insert("Office Space", 10);
