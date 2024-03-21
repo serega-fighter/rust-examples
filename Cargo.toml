@@ -99,25 +99,17 @@ name = "any_dbg_logger"
 path = "src/patterns/utility/any_dbg_logger.rs"
 
 [[bin]]
-name = "thread_scope"
-path = "src/basic/concurrency/thread_scope.rs"
-
-[[bin]]
-name = "mutex_example"
-path = "src/basic/concurrency/mutex_example.rs"
-
-[[bin]]
 name = "atomic_flags_test"
-path = "src/basic/concurrency/atomics/atomic_flags_test.rs"
+path = "src/concurrency/atomics/atomic_flags_test.rs"
 
 [[bin]]
 name = "lazy_initialization_pattern"
-path = "src/basic/concurrency/atomics/lazy_initialization_pattern.rs"
+path = "src/concurrency/atomics/lazy_initialization_pattern.rs"
 
 [[bin]]
 name = "atomic_increment_id_gen"
-path = "src/basic/concurrency/atomics/atomic_increment_id_gen.rs"
+path = "src/concurrency/atomics/atomic_increment_id_gen.rs"
 
 [[bin]]
 name = "fence_test"
-path = "src/basic/concurrency/atomics/fence_test.rs"
+path = "src/concurrency/atomics/fence_test.rs"
